@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package logging;
+
+message LogEntry {
+  string service = 1;
+  string level = 2;
+  string message = 3;
+  int64 timestamp = 4;
+}
+
+message Empty {}
+
+message Query {
+  string service = 1;
+  string level = 2;
+}
+
+message LogResponse {
+  repeated LogEntry entries = 1;
+}
+
+service LogService {
+  rpc SendLog (LogEntry) returns (Empty);
+  rpc QueryLogs (Query) returns (LogResponse);
+  rpc StreamLogs (Query) returns (stream LogEntry);
+}

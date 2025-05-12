@@ -1,0 +1,20 @@
+[
+  {
+    "service": "frontend",
+    "level": "INFO",
+    "message": "123",
+    "timestamp": "1746991917942"
+  },
+  {
+    "service": "frontend",
+    "level": "WARNING",
+    "message": "111",
+    "timestamp": "1746992292446"
+  },
+  {
+    "service": "frontend",
+    "level": "ERROR",
+    "message": "222",
+    "timestamp": "1746992304222"
+  }
+]
